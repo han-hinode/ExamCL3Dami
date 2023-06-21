@@ -62,7 +62,6 @@ class SearchJsonActitivity : AppCompatActivity() {
         }
 
         search.setOnClickListener{
-
             getCourse()
         }
 
@@ -81,11 +80,13 @@ class SearchJsonActitivity : AppCompatActivity() {
                     val todo = response.body()!!
                     titleTodo.setText(todo.title)
                     completedTodo.setText(todo.completed.toString())
+                    Toast.makeText(this@SearchJsonActitivity, "INFORMATION SUCCESSFULLY RECOVERED", Toast.LENGTH_SHORT).show()
+                    idTodo.text.clear()
                 }
             }
 
             override fun onFailure(call: Call<TodoDBResultsItem>, t: Throwable) {
-                Toast.makeText(this@SearchJsonActitivity, "ERROR CONNECTION, TURN ON YOUR INTERNET AND TRY AGAIN ", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@SearchJsonActitivity, "ERROR CONNECTION OR NULL VALUE", Toast.LENGTH_LONG).show()
             }
         })
 

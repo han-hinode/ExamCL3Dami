@@ -87,7 +87,7 @@
             android:id="@+id/titleTodo"
             android:layout_width="match_parent"
             android:textSize="20sp"
-
+            android:editable="false"
             android:hint="Find By ID"
             android:layout_marginBottom="20dp"
             android:layout_height="wrap_content"/>
@@ -102,7 +102,7 @@
             android:id="@+id/completedTodo"
             android:layout_width="match_parent"
             android:hint="Find By ID"
-
+            android:editable="false"
             android:textSize="20sp"
             android:layout_marginBottom="20dp"
             android:layout_height="wrap_content"/>
